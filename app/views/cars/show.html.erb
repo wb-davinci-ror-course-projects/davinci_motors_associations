@@ -1,0 +1,24 @@
+<table>
+  <thead>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Price</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+     <tr>
+      <td><%= @car.make %></td>
+      <td><%= @car.model %></td>
+      <td><%= @car.year %></td>
+      <td><%= @car.price %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_car_path(@car) %>
+<%= link_to 'Destroy', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Home', cars_path %>

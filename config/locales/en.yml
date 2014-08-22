@@ -1,0 +1,27 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  faker:
+    name:
+      make: [Acura, Alfa Romeo, AMC, Aston Martin, Audi, Avanti, Bentley, BMW, Buick, Cadillac, Chevrolet, Chrysler, Daewoo, Daihatsu, Datsun, DeLorean, Dodge, Eagle, Ferrari, FIAT, Fisker, Ford, Freightliner, Geo, GMC, Honda, HUMMER, Hyundai, Infiniti, Isuzu, Jaguar, Jeep, Kia, Lamborghini, Lancia, Land Rover, Lexus, Lincoln, Lotus, Maserati, Maybach, Mazda, McLaren, Mercedes-Benz, Mercury, Merkur, MINI, Mitsubishi, Nissan, Oldsmobile, Peugeot, Plymouth, Pontiac, Porsche, RAM, Renault, Rolls-Royce, Saab, Saturn, Scion, Smart, SRT, Sterling, Subaru, Suzuki, Tesla, Toyota, Triumph, Volkswagen, Volvo, Yugo]
+      model: [Astro, Avalanche, Aveo, Aveo5, Beretta, Blazer, Camaro, Caprice, Captiva Sport, Cavalier, Celebrity, Chevette, Citation, Cobalt, Colorado, Corsica, Corvette, Cruze, El Camino, Equinox, Express Van, Van, HHR, Impala, Kodiak C4500, Lumina, Lumina APV, Malibu, Metro, Monte Carlo, Nova, Prizm, S10 Blazer, S10 Pickup, Sonic, Spark, Spectrum, Sprint, Suburban, Tahoe, Tracker, TrailBlazer, TrailBlazer EXT, Traverse, Uplander, Venture, Volt, Aspen, Caravan, Cirrus, Concorde, Conquest, Cordoba, Crossfire, Grand Voyager, Imperial, Intrepid, Laser, LeBaron, Neon, New Yorker, Newport, Pacifica, Prowler, PT Cruiser, Sebring, Maserati, Voyager, Lanos, Leganza, Nubira, Charade, Rocky, Maxima, Pickup, Pulsar, Sentra, Stanza, DMC-12, Aries, Avenger, Caliber, Caravan, Challenger, Charger, Colt, Conquest, Dakota, Dart, Daytona, Diplomat, Durango, Dynasty, Grand Caravan, Intrepid, Journey, Lancer, Magnum, Mirada, Monaco, Neon, Nitro, Omni, Raider, 1500 Truck]
+      car: "#{Name.make}, #{Name.model}"
