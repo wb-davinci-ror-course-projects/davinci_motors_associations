@@ -6,7 +6,21 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'cars#index'
 
-  resources :cars
+  resources :cars do          # for individual cars
+    member do
+      get 'claim' => 'cars#claim'
+    end
+
+    member do
+      get 'unclaim' => 'cars#unclaim'
+    end
+
+
+    # collection do
+    #   get 'foo'
+    # end
+  end
+
   resources :users,
     only: [:new, :create],
     path_names: { new: 'signup' }
@@ -16,6 +30,9 @@ Rails.application.routes.draw do
     as: 'login'
 
   post '/login' => 'sessions#create'
+
+  get '/my_cars',
+      to: 'cars#my_cars'
 
   delete '/logout',
     to: 'sessions#destroy'

@@ -58,4 +58,30 @@ feature "User Authentication" do
     expect(page).to_not have_text("Welcome back #{@user.first_name}")
     expect(page).to_not have_text('Signed in as')
   end
+
+  scenario "user has link 'My cars'" do
+    @user = FactoryGirl.create(:user, password: 's3krit')
+    @car_1 = FactoryGirl.create(:car, user_id: @user.id, model: "Ford")
+    @car_2 = FactoryGirl.create(:car, user_id: @user.id, make: "Gremlin")
+
+    # log the user in
+    visit login_path
+    fill_in 'Email', with: @user.email
+    fill_in 'Password', with: 's3krit'
+    click_button 'Login'
+
+    visit '/'
+
+    expect(page).to have_link('My Cars')
+
+    click_link 'My Cars'
+
+    expect(page).to have_content(@car_1.make)
+    expect(page).to have_content("Gremlin")
+
+    click_link 'Logout'
+
+    expect(page).to_not have_link('My Cars')
+
+    end
 end
